@@ -24,24 +24,52 @@
           >Official RapWRLD Playlist</a
         >
       </p>
+      <nav>
+        <a href="index.html">Back to Main Page</a>
+      </nav>
     </header>
 
-    <nav id="menu">
-      <!-- Menu category buttons will be created by app.js -->
-    </nav>
-
-    <hr />
-
     <main>
-      <h2 id="selected-artist">
-        <!-- The selected artist's name and links will be dynamically inserted here -->
-      </h2>
+      <form id="new-artist-form" action="https://httpbin.org/post" method="POST">
+        <label for="artist-name">Artist's name:</label>
+        <input type="text" id="artist-name" name="artist-name" required />
 
-      <div id="card-container">
-        <!-- Card elements will be dynamically created by app.js -->
-      </div>
+        <label for="music-genre">Music Genre:</label>
+        <input list="genres" id="music-genre" name="genre" placeholder="Enter or select a genre" />
+        <datalist id="genres">
+          <option value="Hip Hop"></option>
+          <option value="R&B"></option>
+          <option value="Pop"></option>
+          <option value="Rock"></option>
+          <option value="Jazz"></option>
+          <option value="Classical"></option>
+          <option value="Country"></option>
+          <option value="EDM"></option>
+        </datalist>
+
+        <label for="social-urls">Social Media URLs:</label>
+        <div id="social-urls-wrapper">
+          <input type="url" id="social-urls" name="social-urls" required />
+          <button type="button" id="add-social-url">Add another URL</button>
+        </div>
+
+        <label for="music-urls">Music URLs:</label>
+        <div id="music-urls-wrapper">
+          <input type="url" id="music-urls" name="music-urls" required />
+          <button type="button" id="add-music-url">Add another URL</button>
+        </div>
+
+        <label for="explicit-content">Explicit?</label>
+        <input type="checkbox" id="explicit-content" name="explicit-content" />
+
+        <label for="artist-description">Why should this artist be added?</label>
+        <textarea id="artist-description" name="artist-description" required></textarea>
+
+        <input type="submit" value="Request Artist" />
+      </form>
     </main>
 
+    <!-- Newsletter Sign up Form -->
     <footer>
       <form id="newsletter-form" action="https://httpbin.org/post" method="POST">
         <div class="newsletter-wrapper">

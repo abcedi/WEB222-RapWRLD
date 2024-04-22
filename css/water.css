@@ -1706,3 +1706,131 @@ header a:hover {
 .artist-links {
   font-size: 0.8em;
 }
+
+/* Newsletter Form Styles */
+footer {
+  padding: 2rem;
+  text-align: center;
+}
+
+.newsletter-wrapper {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: center; /* Centers the content horizontally */
+  gap: 0.5rem; /* Adds space between elements */
+}
+
+footer form label {
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+footer form input[type="email"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+footer form input[type="submit"] {
+  background-color: #0076d1;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+footer form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for copyright text */
+footer p.copyright-text {
+  color: #70777f; /* Muted text color for better readability */
+  font-size: 0.75rem;
+  margin-top: 1rem; /* Space from the newsletter form */
+}
+
+/* General alignment */
+body,
+header,
+main,
+footer {
+  text-align: center; /* Centers text elements */
+}
+
+/* Centers main content blocks within the page */
+header,
+main,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Aligns children centrally in the cross-axis */
+  justify-content: center;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc; /* Adds a subtle border for better visibility */
+  border-radius: 8px; /* Rounds corners */
+  width: 80%; /* Sets a max width to prevent very wide forms */
+  max-width: 500px; /* Ensures forms do not exceed a reasonable width */
+  margin: 20px auto; /* Centers form and adds spacing above and below */
+}
+
+/* Input and button styling within forms */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea,
+input[type="submit"] {
+  width: 90%; /* Makes form elements take most of the form width */
+  margin: 10px 0; /* Adds vertical spacing */
+}
+
+/* Special styling for inline elements like labels next to inputs */
+.newsletter-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.newsletter-wrapper input[type="email"],
+.newsletter-wrapper input[type="submit"] {
+  margin: 0 5px; /* Adds spacing between inline elements */
+}
+
+/* Enhance the appearance of the button */
+input[type="submit"],
+button {
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #0076d1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover for better interaction feedback */
+}
+
+/* Utility classes for better responsive design */
+@media (max-width: 600px) {
+  form,
+  .newsletter-wrapper {
+    flex-direction: column;
+  }
+}
+
+.request-link-wrapper {
+  text-align: center; /* Center the link */
+  margin-top: 10px; /* Space from the last artist button */
+}
